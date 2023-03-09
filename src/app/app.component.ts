@@ -14,10 +14,8 @@ export class AppComponent implements OnInit {
 
 
   postListener = () => {
-    console.log('yes')
     // Listen for messages from the sending window
     window.addEventListener('message', function(event) {
-      console.log(event)
       // Check that the message came from the expected origin
       if (event.origin === 'http://localhost:4200') {
         // Do something with the message
